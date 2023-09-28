@@ -49,7 +49,8 @@ on:
     branches: [ "master" ]
 
 env:
-  PROJECT_ID: '${{ secrets.PROJECT_ID }}' # TODO: update Google Cloud project id
+  # PROJECT_ID: '${{ secrets.PROJECT_ID }}' # TODO: update Google Cloud project id
+  PROJECT_ID: poetic-bison-354504 # TODO: update Google Cloud project id
   GAR_LOCATION: us-south1 # TODO: update Artifact Registry location
   SERVICE: ml-api # TODO: update Cloud Run service name
   REGION: '${{ secrets.REGION }}' # TODO: update Cloud Run service region
