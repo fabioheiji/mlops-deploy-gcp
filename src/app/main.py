@@ -15,7 +15,8 @@ columns = ['tamanho', 'ano', 'garagem']
 # X_train, X_test, y_train, y_test = train_test_split(X,y,test_size=0.3)
 # model = LinearRegression()
 # model.fit(X_train,y_train)
-path = '../../models'
+# path = '../../models'
+path = 'models'
 
 with open(os.path.join(path,'model.pkl'),'rb') as file:
     model = pickle.load(file)
@@ -47,4 +48,5 @@ def preco():
     previsao = model.predict([data])
     return str(previsao[0])
 
-app.run(port=5001, debug=True, host='0.0.0.0')
+if (__name__ == '__main__'):
+    app.run(port=5000, debug=True, host='0.0.0.0')
